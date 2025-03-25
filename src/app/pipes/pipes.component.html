@@ -1,28 +1,35 @@
-<p>{{dateValue}}</p>
-<p>{{ dateValue| date:'short' }}</p>
-<p>{{ dateValue | date:'fullDate' }}</p>
-<p>{{ dateValue | date:'yyyy-MM-dd' }}</p>
+<h1 style="text-align:center;">Pipes</h1>
+<div class="pipess">
+    <h4>Date pipes</h4>
+    <p>{{dateValue}}</p>
+    <p>{{ dateValue| date:'short' }}</p>
+    <p>{{ dateValue | date:'fullDate' }}</p>
+    <p>{{ dateValue | date:'yyyy-MM-dd' }}</p>
 
-<!-- uppercase and lowercase pipes -->
-<p>{{ 'hello world' | uppercase }}</p>
-<p>{{ 'HELLO WORLD' | lowercase }}</p>
+    <!-- uppercase and lowercase pipes -->
+     <h4>uppercase and lowercase pipes</h4>
+    <p>{{ 'hello world' | uppercase }}</p>
+    <p>{{ 'HELLO WORLD' | lowercase }}</p>
 
-<!-- currency pipe -->
-<p>{{ 1234.56 | currency }}</p> 
-<p>{{ 1234.56 | currency:'EUR' }}</p>  
-<p>{{ 1234.56 | currency:'GBP':true }}</p>
+    <!-- currency pipe -->
+     <h4>currency pipe</h4>
+    <p>{{ 1234.56 | currency }}</p> 
+    <p>{{ 1234.56 | currency:'EUR' }}</p>  
+    <p>{{ 1234.56 | currency:'GBP':true }}</p>
 
-<!-- percent pipe -->
+    <!-- percent pipe -->
+    <h4>percent pipe</h4>
+    <p>{{ 0.25 | percent }}</p> 
+    <p>{{ 0.255 | percent:'1.2-2' }}</p> 
 
-<p>{{ 0.25 | percent }}</p> 
-<p>{{ 0.255 | percent:'1.2-2' }}</p> 
+    <!-- json pipe -->
+     <h4>json pipe</h4>
+    <pre>{{ objectData | json }}</pre>
 
-<!-- json pipe -->
-<pre>{{ objectData | json }}</pre>
-
-<!-- slice pipe -->
-
-<p>{{ 'Hello World' | slice:0:5 }}</p> <!-- Output: Hello -->
+    <!-- slice pipe -->
+    <h4>slice pipe</h4>
+    <p>{{ 'Hello World' | slice:0:5 }}</p> <!-- Output: Hello -->
+</div>
 
 
 

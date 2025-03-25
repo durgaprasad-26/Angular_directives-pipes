@@ -1,47 +1,60 @@
 <!-- directives -->
 <!-- ngFor -->
-<h1>This was Included as a part of the ngFor</h1>
-<ul>
-<li *ngFor="let product of products">
-    <p>Product Name: {{ product.name }}</p>
-    <p>Price: ${{ product.price }}</p>
-</li>
-</ul>
+ <h1 style="text-align: center;">Directives</h1>
+<div class="div">
+    <h3>ngFor</h3>
+    <ul>
+    <li *ngFor="let product of products">
+        <p>Product Name: {{ product.name }}</p>
+        <p>Price: ${{ product.price }}</p>
+    </li>
+    </ul>
+</div>
+
   
 <!-- ngStyle -->
-<h1>This was Included as a part of the ngStyle</h1>
-<p [ngStyle]="{'color':check?'pink':'green'}">this is ngStyle</p>
+ <div class="div">
+    <h3>ngStyle</h3>
+    <p [ngStyle]="{'color':check?'pink':'green'}">this is ngStyle</p>
+    <div [ngStyle]="{
+        'background-color': status === 'success' ? 'green' : status === 'warning' ? 'yellow' : 'red',
+        'color': status === 'success' ? 'white' : 'black'
+      }">
+        The status is {{ status }}
+    </div>
+ </div>
 
-<div [ngStyle]="{
-    'background-color': status === 'success' ? 'green' : status === 'warning' ? 'yellow' : 'red',
-    'color': status === 'success' ? 'white' : 'black'
-  }">
-    The status is {{ status }}
-</div>
+
+
 
 <!-- ngif -->
-<h1>This was Included as a part of the ngif</h1>
-<div *ngIf="islogged ;then yesblock ;else noblock"></div>
-
-<ng-template #yesblock>
- <h1>This is Accepted block</h1>
-</ng-template>
-
-<ng-template #noblock>
-    <h1>This is Rejected block</h1>
-</ng-template>
+ <div class="div">
+    <h3>ngif</h3>
+    <div *ngIf="islogged ;then yesblock ;else noblock"></div>
+    <ng-template #yesblock>
+        <p>This is Accepted block</p>
+       </ng-template>
+    <ng-template #noblock>
+        <p style="color:red;"> This is Rejected Block</p>
+    </ng-template>
+ </div>
 
 <!-- ngclass -->
-<h1>This was Included as a part of the ngclass</h1>
-
-
-<div [ngClass]="isActive ? 'active' : 'inactive'">This div's class will change based on isActive</div>
-
-<div [ngSwitch]="case">
-    <div *ngSwitchCase="'case1'" style="background-color: green;"><img src="./../assets/112794182696499.65325533ef656.png" height="1em" width="100%"></div>
-    <div *ngSwitchCase="'case2'">this was part of case2</div>
-    <div *ngSwitchCase="'case3'">this was part of case2</div>
-    <div *ngSwitchCase="'case4'">this was part of case2</div>
+<div class="div">
+    <h3>ngclass</h3>
+    <div [ngClass]="isActive ? 'active' : 'inactive'">This div's class will change based on isActive</div>
 </div>
+
+<!-- ngSwitch -->
+<div class="div">
+    <h3>ngSwitch</h3>
+    <div [ngSwitch]="case">
+        <div *ngSwitchCase="'case1'" ><img src="./../assets/112794182696499.65325533ef656.png" height="80vhvh" width="70vw"></div>
+        <div *ngSwitchCase="'case2'">this was part of case2</div>
+        <div *ngSwitchCase="'case3'">this was part of case2</div>
+        <div *ngSwitchCase="'case4'">this was part of case2</div>
+    </div>
+</div>
+
 <app-pipes></app-pipes>
 

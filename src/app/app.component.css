@@ -3,4 +3,18 @@
 }
 .inactive{
     background-color:red;
+    border-radius: 30px;
+}
+.div{
+    margin-top:30px;
+    background-color: aqua;
+    text-align: center;
+    border-radius:30px;
+
+}
+.div div:hover{
+    color:burlywood
+}
+h3{
+    text-decoration:underline;
 }
