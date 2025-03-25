@@ -1,0 +1,28 @@
+<!-- ngFor -->
+<div *ngFor="let p of [1,2,3,4];let i=index">
+    <h1>hello</h1>
+    <p>
+        {{p}}
+    </p>
+</div>
+<!-- ngStyle -->
+ <p [ngStyle]="{'color':check?'pink':'green'}">this is ngStyle</p>
+
+ <!-- ngif -->
+
+<div *ngIf="islogged ;then yesblock ;else noblock">
+    
+    
+</div>
+
+<ng-template #yesblock>
+ <h1>This is Accepted block</h1>
+</ng-template>
+
+<ng-template #noblock>
+    <h1>This is Rejected block</h1>
+</ng-template>
+
+<p>{{ name | uppercase |customPipe}}</p>
+
+
