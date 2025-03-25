@@ -8,5 +8,4 @@ export class CustomPipePipe implements PipeTransform {
   transform(value:String):String {
     return value.split('').reverse().join('');;
   }
-
 }
